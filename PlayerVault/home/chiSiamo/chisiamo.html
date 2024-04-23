@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/home/Playervault.png">
+    <link href="ch.css" rel="stylesheet" type="text/css">
+    <title>Ingresso</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 1 em = 16 px */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #BDE420;
+            line-height: 1.6;
+            color: #333;
+            /*animazione*/
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        h2, p{
+            color: white;
+        }
+
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between; /* Allinea i contenuti ai lati */
+            padding: 10px 20px; /* Aggiungi spaziatura interna */
+        }
+
+        .brand {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            float: left;
+        }
+
+        .nav-links li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            background-color: #111;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #336633; /* Colore di sfondo verde scuro */
+            border-radius: 10px; /* Border-radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra */
+        }
+
+        .center-button {
+            background-color: black; /* Colore nero */
+            color: white; /* Testo bianco */
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 20px; /* Spazio sopra il pulsante */
+            margin-left: 46%;
+            text-decoration: none; /* Rimuove la sottolineatura */
+
+        }
+
+        .center-button:hover {
+            background-color: #555;
+            color: white; /* Imposta il colore del testo bianco anche quando il mouse è sopra il bottone */
+        }
+
+        .content img {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Applica un'ombra all'immagine */
+            border-radius: 7px; /* Aggiunge un bordo arrotondato all'immagine */
+            max-width: 100%; /* Assicura che l'immagine non superi la larghezza del suo contenitore */
+            height: auto; /* Mantiene l'aspetto proporzionato dell'immagine */
+            margin: 0 auto; /* Centra l'immagine orizzontalmente */
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .brand {
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                float: none;
+            }
+
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="brand">Player Vault</div>
+    <ul class="nav-links">
+        <li><a href="/PlayerVault/home/index.html">Home</a></li>
+        <li><a href="chisiamo.html">Chi siamo</a></li>
+        <li><a href="/PlayerVault/home/contatti/contatti.html">Contatti</a></li>
+        <li><a href="/PlayerVault/home/segnalaunproblema/segnalaunproblema.html">Segnala un problema</a></li>
+    </ul>
+</nav>
+<br>
+
+<div class="content">
+    <h2>Chi siamo</h2>
+    <p>Ciao! sono Fabio Antonio Merello, ho 18 anni  e abito a Genova. Frequento il quinto anno di ITIS Calvino, ramo informatica. Il mio sogno è quello di lavorare nel mondo del calcio e, giunto verso la fine del mio percorso di studi, ho capito che è tempo di darsi da fare. Da sempre il calciomercato è stata la mia passione, soprattutto quando interessa la squadra che tifo, la Sampdoria.</p>
+
+    <img src="https://1000marche.net/wp-content/uploads/2020/03/sampdoria-logo.png" alt="Descrizione dell'immagine">
+
+    <p><br><br>Purtroppo nel calcio giocato non ho trovato la mia dimensione causa impedimenti tecnici, ma grazie proprio a questa sfortuna ho potuto vivere emozioni ben più grandi. Una volta mollato il calcio a 16 anni, ho iniziato a recensire gli impianti sportivi sparsi per tutto il territorio ligure, dato il mio passato da 'scaldapanchine'. Questo mi ha portato ad essere ospite fisso in una trasmissione sportiva, ‘Dilettantissimo’, su Telenord. Sono stati mesi bellissimi che mi hanno fatto capire cosa volevo fare da grande. Ho collaborato sempre a questo proposito con club quali Virtus Entella ed altri successivamente. </p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/it/a/a8/Telenord.png" alt="Descrizione dell'immagine">
+
+    <p>
+        <br><br>Da qualche mese a questa parte sto lavorando a questo progetto che richiederà ancora tanto impegno e passione, soprattutto se in solitaria. L’idea è nata giocando a Football Manager, rovistando tra i vari giocatori. Mi sono accorto che il loro metodo per aggiungere un giocatore alla ‘lista selezionati’ è molto dettagliata e volevo replicarla per chi ne avesse bisogno nella realtà.
+    </p>
+    <img src="https://www.footballmanager.com/themes/custom/fmtwentytwentythree/img/logos/FM_Final_Logo_Family_FM21_RGB-nodate-dark.png" alt="Descrizione dell'immagine">
+</div>
+
+<button class="center-button"><a href="#">Torna su</a></button>
+
+
+<script>
+    document.querySelector('.center-button').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Scorrimento fluido
+        });
+    });
+</script>
+</body>
+</html>

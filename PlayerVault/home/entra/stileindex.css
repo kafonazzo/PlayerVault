@@ -1,0 +1,154 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+/*
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #BDE420;
+}
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #BDE420;
+    line-height: 1.6;
+    color: #333;
+    /*animazione*/
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+header {
+    font-family: 'Arial', sans-serif;
+    background-color: #BDE420;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box; /* Garantisce che il padding non aumenti la larghezza totale dell'header */
+
+}
+
+#titolo{
+    font-family: 'Arial', sans-serif;
+    color: black;
+}
+
+#logo {
+  max-width: 7%;
+  height: auto;
+  vertical-align: middle; /* Allinea verticalmente l'immagine al centro del contenitore */
+  margin-left: 10px;
+}
+
+h2, p{
+    color: white;
+    font-family: 'Arial', serif;
+}
+
+.centered-div {
+
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%; /* Posiziona il div a metà dell'altezza dello schermo */
+    left: 50%; /* Posiziona il div a metà della larghezza dello schermo */
+    transform: translate(-50%, -50%); /* Sposta il div indietro di metà della sua larghezza e altezza */
+}
+
+form {
+
+  text-align: center;
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0px 0px 10px black;
+}
+
+label {
+    font-family: 'Arial', serif;
+  display: block;
+  text-align: left;
+  margin-bottom: 2px;
+  color: #292929;
+}
+
+.title {
+    font-size: 5vw;
+    text-align: center;
+    color: #000000;
+}
+
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between; /* Allinea i contenuti ai lati */
+    padding: 10px 20px; /* Aggiungi spaziatura interna */
+}
+
+.brand {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    float: left;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #111;
+}
+
+@media only screen and (max-width: 780px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        float: none;
+    }
+
+    .centered-div {
+        margin-top: 40vh; /* Aumenta ulteriormente il margine per schermi molto piccoli */
+    }
+
+}
+        

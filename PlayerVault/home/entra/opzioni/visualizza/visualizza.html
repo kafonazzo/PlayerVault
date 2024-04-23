@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../../Playervault.png">
+    <link href="intro.css" rel="stylesheet" type="text/css">
+    <title>Ingresso</title>
+
+
+    <style>
+        .rectangles {
+
+            display: flex;
+            flex-direction: column; /* Imposta la direzione della flessione come colonna */
+            align-items: center; /* Allinea gli oggetti al centro lungo l'asse trasversale */
+            gap: 5vh; /* Aggiungi spazio tra gli elementi */
+            margin-top: 10vh; /* Sposta il contenitore verso il basso */
+        }
+
+        .rectangle {
+            font-family: Roboto, sans-serif;
+            color: white;
+            width: 30%;
+            height: 50%;
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 5vh;
+        }
+
+        /* Media query per schermi più piccoli */
+        @media screen and (max-width: 768px) {
+            .rectangle {
+                width: calc(50% - 20px);
+            }
+        }
+
+        /* Media query per schermi ancora più piccoli */
+        @media screen and (max-width: 480px) {
+            .rectangle {
+                width: calc(100% - 20px);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        /* 1 em = 16 px */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #BDE420;
+            line-height: 1.6;
+            color: #333;
+            /*animazione*/
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        h2, p{
+            color: white;
+        }
+
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between; /* Allinea i contenuti ai lati */
+            padding: 10px 20px; /* Aggiungi spaziatura interna */
+        }
+
+        .brand {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            float: left;
+        }
+
+        .nav-links li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            background-color: #111;
+        }
+
+
+        button {
+            background-color: #BDE420;
+            color: #000000;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-top: 3px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .rectangles h1 {
+            font-size: 24px; /* Dimensione del titolo */
+            margin-bottom: 20px; /* Spazio inferiore */
+            color: #333; /* Colore del testo */
+        }
+
+        .rectangles label {
+            display: block; /* Rendi i label a blocco */
+            margin-bottom: 8px; /* Spazio inferiore */
+            color: #555; /* Colore del testo */
+        }
+
+        .rectangles input[type="text"] {
+            width: calc(100% - 20px); /* Larghezza del campo input */
+            padding: 8px; /* Spazio interno */
+            margin-bottom: 16px; /* Spazio inferiore */
+            border: 1px solid #ccc; /* Bordo sottile */
+            border-radius: 4px; /* Bordi arrotondati */
+            box-sizing: border-box; /* Considera il padding e il bordo nella larghezza */
+        }
+
+        .rectangles button {
+            background-color: #BDE420; /* Colore di sfondo del pulsante */
+            color: #fff; /* Colore del testo */
+            border: none; /* Rimuovi il bordo */
+            padding: 10px 20px; /* Spazio interno */
+            border-radius: 4px; /* Bordi arrotondati */
+            cursor: pointer; /* Cambia il cursore al passaggio */
+            transition: background-color 0.3s ease; /* Transizione del colore di sfondo */
+        }
+
+        .rectangles button:hover {
+            background-color: #8dbf0e; /* Cambia il colore di sfondo al passaggio del mouse */
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .brand {
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="brand">Player Vault</div>
+    <ul class="nav-links">
+        <li><a href="/PlayerVault/home/index.html">Home</a></li>
+        <li><a href="/PlayerVault/home/chiSiamo/chisiamo.html">Chi siamo</a></li>
+        <li><a href="/PlayerVault/home/contatti/contatti.html">Contatti</a></li>
+        <li><a href="/PlayerVault/home/segnalaunproblema/segnalaunproblema.html">Segnala un problema</a></li>
+    </ul>
+</nav>
+<br>
+
+<div class="rectangles">
+    <!-- Link diretto a players.php -->
+    <a href="visualizza.php" class="rectangle">
+        <h3>Visualizza i tuoi calciatori</h3>
+        <p>Aggiungi, modifica e visualizza i tuoi campioni</p>
+    </a>
+</div>
+
+<div class="rectangles">
+    <h1>Usa i filtri!</h1>
+    <form class="rectangle" method="GET" action="visualizza.php">
+        <label for="squadra">Squadra:</label>
+        <input type="text" id="squadra" name="squadra">
+        <label for="posizione">Posizione:</label>
+        <input type="text" id="posizione" name="posizione">
+        <label for="stipendio">Stipendio:</label>
+        <input type="number" id="stipendio" name="stipendio">
+        <label for="ordine">Ordine:</label>
+        <select id="ordine" name="ordine">
+            <option value="ASC">Crescente</option>
+            <option value="DESC">Decrescente</option>
+        </select>
+        <button type="submit">Filtra</button>
+    </form>
+</div>
+</body>
+</html>

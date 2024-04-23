@@ -1,0 +1,131 @@
+.rectangles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh; /* Aggiungi spazio tra i div */
+}
+
+.rectangle {
+    font-family: Roboto, sans-serif;
+    color: white;
+    width: 30%;
+    height: 50%;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 5vh;
+}
+
+/* Media query per schermi più piccoli */
+@media screen and (max-width: 768px) {
+    .rectangle {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Media query per schermi ancora più piccoli */
+@media screen and (max-width: 480px) {
+    .rectangle {
+        width: calc(100% - 20px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* 1 em = 16 px */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #BDE420;
+    line-height: 1.6;
+    color: #333;
+    /*animazione*/
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+h2, p{
+    color: white;
+}
+
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between; /* Allinea i contenuti ai lati */
+    padding: 10px 20px; /* Aggiungi spaziatura interna */
+}
+
+.brand {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    float: left;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #111;
+}
+
+
+button {
+    background-color: #BDE420;
+    color: #000000;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 3px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        float: none;
+    }
+}

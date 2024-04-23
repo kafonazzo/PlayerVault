@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../../Playervault.png">
+    <link href="query.css" rel="stylesheet" type="text/css">
+    <title>Ingresso</title>
+
+
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="brand">Player Vault</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Chi siamo</a></li>
+        <li><a href="#">Contatti</a></li>
+        <li><a href="#">Segnala un problema</a></li>
+    </ul>
+</nav>
+<br>
+<div class="centered-div">
+
+    <br>
+    <br>
+    <h2>Inserisci un nuovo atleta</h2>
+    <form method="POST" action="connessione.php">
+        <!-- Utilizza l'email dell'utente memorizzata nella sessione -->
+        <input type="hidden" name="email" value="<?php echo $_SESSION['email']; ?>">
+
+        <label>Nome del calciatore:</label>
+        <input  type="text" name="nome"><br><br>
+
+        <label>Cognome del calciatore:</label>
+        <input  type="text" name="cognome"><br><br>
+
+        <label>La squadra del calciatore:</label>
+        <input  type="text" name="squadra"><br><br>
+
+        <label>La posizione del calciatore:</label>
+        <input  type="text" name="posizione"><br><br>
+
+        <label>La data di nascita del calciatore ("YYYY-MM-DD"):</label>
+        <input  type="text" name="data"><br><br>
+
+        <label>L'inizio dello stipendio del calciatore ("YYYY-MM-DD"):</label>
+        <input  type="text" name="iStipendio"><br><br>
+
+        <label>La fine dello stipendio del calciatore ("YYYY-MM-DD"):</label>
+        <input  type="text" name="fStipendio"><br><br>
+
+        <label>Il totale dello stipendio del calciatore:</label>
+        <input  type="text" name="totale"><br><br>
+
+        <input type="submit" value="Registra">
+    </form>
+</div>
+</body>
+</html>
